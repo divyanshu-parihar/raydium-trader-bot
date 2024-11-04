@@ -1,0 +1,35 @@
+{
+  "name": "sol-swap-bot",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-builder --mac",
+    "package-win": "electron-builder --win",
+    "build": "electron-builder -mw"
+  },
+  "build": {
+    "appId": "com.raydium.trader",
+    "mac": {
+      "category": "public.app-category.finance"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "private": true,
+  "dependencies": {
+    "@project-serum/serum": "^0.13.65",
+    "@raydium-io/raydium-sdk-v2": "^0.1.73-alpha",
+    "@solana/spl-token": "^0.4.9",
+    "@solana/web3.js": "^1.95.4",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
